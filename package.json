@@ -1,0 +1,15 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:moesuiga/notes.git",
+  "author": "moesuiga <wyw1121@live.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "vuepress": "^1.0.0-alpha.47"
+  }
+}
