@@ -39,7 +39,7 @@ photos:
 
 然后我就可以这样做
 
-<div style="position: relative; width: 80px; height: 68px; line-height: 68px; text-align: center;"><div style="width: 100%; height: 100%;">10元</div><div style="width: 100%; height: 100%; box-sizing: border-box; position: absolute; left: 0; top: 0; z-index: -1; border-width: 34px; border-style: solid; -webkit-border-image: url(https://miao.su/images/2019/03/12/d22ea6dd07ce2041566cc.png) 50% 34 repeat;border-image: url(https://miao.su/images/2019/03/12/d22ea6dd07ce2041566cc.png) 50% 34 repeat;"></div></div>
+<div style="position: relative; z-index: 1; width: 80px; height: 68px; line-height: 68px; text-align: center;"><div style="width: 100%; height: 100%;">10元</div><div style="width: 100%; height: 100%; box-sizing: border-box; position: absolute; left: 0; top: 0; z-index: -1; border-width: 34px; border-style: solid; -webkit-border-image: url(https://miao.su/images/2019/03/12/d22ea6dd07ce2041566cc.png) 50% 34 repeat;border-image: url(https://miao.su/images/2019/03/12/d22ea6dd07ce2041566cc.png) 50% 34 repeat;"></div></div>
 
 
 随着宽度的改变，图片也会进行拉伸，但是却不会影响到右边的圆角及内凹弧度

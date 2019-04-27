@@ -1,3 +1,11 @@
 module.exports = {
-  base: '/notes/'
+  base: '/notes/',
+  themeConfig: {
+    nav: [
+      { text: 'Home', link: '/' }
+    ],
+    // sidebar: [
+    //   ['/', 'Home'],
+    // ]
+  }
 }
