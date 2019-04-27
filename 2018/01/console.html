@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>console function</title>
+    <meta name="description" content="控制台console的一些方法记录">
+    
+    
+    <link rel="preload" href="/notes/assets/css/0.styles.0233c2df.css" as="style"><link rel="preload" href="/notes/assets/js/app.1fec33eb.js" as="script"><link rel="preload" href="/notes/assets/js/2.ea0af7b1.js" as="script"><link rel="preload" href="/notes/assets/js/4.2d2d707a.js" as="script"><link rel="prefetch" href="/notes/assets/js/10.a2c16757.js"><link rel="prefetch" href="/notes/assets/js/11.83cc0f95.js"><link rel="prefetch" href="/notes/assets/js/12.332b5ce2.js"><link rel="prefetch" href="/notes/assets/js/13.2dcfbca9.js"><link rel="prefetch" href="/notes/assets/js/14.5dc5524a.js"><link rel="prefetch" href="/notes/assets/js/15.710c1ff8.js"><link rel="prefetch" href="/notes/assets/js/16.ff043d55.js"><link rel="prefetch" href="/notes/assets/js/17.2e4d1660.js"><link rel="prefetch" href="/notes/assets/js/18.91fc2f7b.js"><link rel="prefetch" href="/notes/assets/js/19.37438221.js"><link rel="prefetch" href="/notes/assets/js/20.a3c91312.js"><link rel="prefetch" href="/notes/assets/js/21.7c33854d.js"><link rel="prefetch" href="/notes/assets/js/22.abbd4dc7.js"><link rel="prefetch" href="/notes/assets/js/23.0b96b6d7.js"><link rel="prefetch" href="/notes/assets/js/24.b5896a69.js"><link rel="prefetch" href="/notes/assets/js/3.d41d00ab.js"><link rel="prefetch" href="/notes/assets/js/5.b3c9369b.js"><link rel="prefetch" href="/notes/assets/js/6.1ac7d3cc.js"><link rel="prefetch" href="/notes/assets/js/7.8c1463ae.js"><link rel="prefetch" href="/notes/assets/js/8.4ed7e828.js"><link rel="prefetch" href="/notes/assets/js/9.4e70c710.js">
+    <link rel="stylesheet" href="/notes/assets/css/0.styles.0233c2df.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/notes/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/notes/" class="nav-link">Home</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/notes/" class="nav-link">Home</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="content default"><h3 id="log"><a href="#log" aria-hidden="true" class="header-anchor">#</a> log</h3> <p>在控制台打印内容，一般的用法就是<code>console.log(info[,info,...])</code>。
+然后还有一个比较有趣的用法，第一个参数中可以包含格式化占位符。</p> <div class="language- extra-class"><pre class="language-text"><code>console.log('%s未来的你是否笑着，连神明都不知道', '别太担忧晚年如何，');
+//=&gt; 别太担忧晚年如何，未来的你是否笑着，连神明都不知道
+</code></pre></div> <p>格式化占位符列表：</p> <table><thead><tr><th>占位符</th> <th>意义</th></tr></thead> <tbody><tr><td>%s</td> <td>字符串</td></tr> <tr><td>%d, %i</td> <td>整型（暂不支持数字型）</td></tr> <tr><td>%f</td> <td>浮点型（暂不支持数字型）</td></tr> <tr><td>%o</td> <td>链接对象</td></tr> <tr><td>%c</td> <td>CSS格式字符串</td></tr></tbody></table> <p>可以通过<code>%c</code>占位符给输出的文本添加一些样式，比如更大的字号、更醒目的颜色、添加背景色等，使得输出更加醒目。</p> <h3 id="debug-info"><a href="#debug-info" aria-hidden="true" class="header-anchor">#</a> debug/info</h3> <p>console.log的别名，
+<s>不过console.info会在输出的文本前加上一个小三角标示。</s>
+不过<code>debug</code>不输出。
+<script>
+{
+var text = 'Without a date'
+console.debug('debug 不输出');
+console.info('info: ',text);
+}
+</script></p> <h3 id="warn"><a href="#warn" aria-hidden="true" class="header-anchor">#</a> warn</h3> <p>在控制台输出一条带有“警告”图标的消息和一个指向该代码调用的追溯引用信息</p> <h3 id="error"><a href="#error" aria-hidden="true" class="header-anchor">#</a> error</h3> <p>在控制台输出一条带有“错误”图标的消息和一个指向该代码调用的追溯引用信息</p> <h3 id="trace"><a href="#trace" aria-hidden="true" class="header-anchor">#</a> trace</h3> <p>在控制台输出该代码调用的追溯引用信息</p> <h3 id="time-timeend"><a href="#time-timeend" aria-hidden="true" class="header-anchor">#</a> time/timeEnd</h3> <p><code>console.time(name)</code>创建一个名字为name的计时器，<code>console.timeEnd(name)</code>停止该计时器，并输出从创建到停止所耗的时间（毫秒）。常用来查看代码运行的效率性能。</p> <h3 id="group-groupend-groupcollapsed"><a href="#group-groupend-groupcollapsed" aria-hidden="true" class="header-anchor">#</a> group/groupEnd/groupCollapsed</h3> <p><code>group</code>方法输出一条消息，并打开一个嵌套块，块中的内容都会缩进，调用<code>console.groupEnd()</code>关闭块。
+<code>groupCollapsed</code>方法与<code>group</code>方法很类似，唯一的区别是该组的内容，在第一次显示时是收起的，而不是展开的。</p> <h3 id="profile-profileend"><a href="#profile-profileend" aria-hidden="true" class="header-anchor">#</a> profile/profileEnd</h3> <p><code>console.profile([title])</code>打开JavaScript性能测试开关，可选参数title会在打印性能测试报告时在报告的开头输出。</p> <h3 id="table"><a href="#table" aria-hidden="true" class="header-anchor">#</a> table</h3> <p>对于某些复合类型的数据，<code>console.table(object)</code>方法可以将其转为表格显示。条件是必须拥有主键。
+对于数组来说，主键就是数字键；对于对象来说，主键就是它的最外层键。</p> <div class="language- extra-class"><pre class="language-text"><code>var o = {
+    arr: [5, 4, 3, 2, 1],
+    str: 'string',
+    num: 123,
+    bool: true,
+    null: null
+};
+console.table(o);
+/*
+    ---------------------------------------------------
+    | (index) | 0 | 1 | 2 | 3 | 4 | length |   Value  |
+    |-------------------------------------------------|
+    | arr     | 5 | 4 | 3 | 2 | 1 |    5   |          |
+    | str     |   |   |   |   |   |        | &quot;string&quot; |
+    | num     |   |   |   |   |   |        | 123      |
+    | bool    |   |   |   |   |   |        | true     |
+    | null    |   |   |   |   |   |        | null     |
+    ---------------------------------------------------
+    &gt; object
+ */
+</code></pre></div><h3 id="count"><a href="#count" aria-hidden="true" class="header-anchor">#</a> count</h3> <p>计数器，输出它被调用了多少次，有一个可选参数，会在显示计数时在开头输出，并用于区分不同的计数器。</p> <h3 id="dir-dirxml"><a href="#dir-dirxml" aria-hidden="true" class="header-anchor">#</a> dir/dirxml</h3> <p><code>dir</code>方法用来对一个对象进行检查，并以易于阅读和打印的格式显示，该方法对于输出DOM对象非常有用。
+<code>dirxml</code>方法主要用于以目录树的形式，显示DOM节点。如果参数不是DOM节点，而是普通的JavaScript对象，<code>console.dirxml</code>等同于<code>console.dir</code>。</p> <h3 id="assert"><a href="#assert" aria-hidden="true" class="header-anchor">#</a> assert</h3> <p><code>assert</code>方法主要用于程序运行过程中，进行条件判断，如果不满足条件，就显示一个错误，但不会中断程序的执行。这样就相当于提示用户，内部状态不正确。</p> <p>它接收两个参数，第一个是表达式，第二个是字符串。只有当第一个参数为<code>false</code>时，才会提示有错误，在控制台输出第二个参数，否则不会有任何结果。</p> <div class="language- extra-class"><pre class="language-text"><code>console.assert(1 &gt; 2, '判断错误');
+//=&gt; Assertion failed: 判断错误
+
+// 相当于
+try {
+  if (1 &gt; 2) {
+    throw new Error('判断错误');
+  }
+} catch(e) {
+  console.error(e);
+}
+</code></pre></div><h3 id="clear"><a href="#clear" aria-hidden="true" class="header-anchor">#</a> clear</h3> <p>clear方法用于清除当前控制台的所有输出，将光标回置到第一行。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/notes/assets/js/app.1fec33eb.js" defer></script><script src="/notes/assets/js/2.ea0af7b1.js" defer></script><script src="/notes/assets/js/4.2d2d707a.js" defer></script>
+  </body>
+</html>
